@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/My Certificacion Proyects/Survey form/style.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title text--titles">FreeCodeCamp</h1>
+      <nav class="header__nav">
+        <a href="" class="header__link">Home</a>
+        <a href="" class="header__link">About us</a>
+        <a href="" class="header__link">Products</a>
+      </nav>
+    </header>
+    <main class="main">
+      <h2 class="main__title text--titles">freeCodeCamp SurveyForm</h2>
+      <p id="description" class="main__description text--paragrap">
+        Thank you for taking the time to help us improve the platform
+      </p>
+      <form action="" id="survey-form" class="form">
+        <fieldset class="form__fieldset">
+          <label for="name" class="form__label" id="name-label">
+            Name
+            <input
+              name="name"
+              id="name"
+              type="text"
+              required
+              placeholder="Enter your name"
+              class="form__input"
+            />
+          </label>
+          <label for="email" class="form__label" id="email-label">
+            Email
+            <input
+              name="email"
+              id="email"
+              type="email"
+              required
+              placeholder="Enter your Email"
+              class="form__input"
+            />
+          </label>
+          <label for="number" class="form__label" id="number-label">
+            Age(optional)
+            <input
+              name="number"
+              id="number"
+              type="number"
+              min="17"
+              max="100"
+              placeholder="Age"
+              class="form__input"
+            />
+          </label>
+          <label for="dropdown" class="form__label">
+            Which option best describes your current role
+            <select name="dropdown" id="dropdown" required class="form__select">
+              <option value="">Select current role</option>
+              <option value="Student">Student</option>
+              <option value="Full Job Time">Full Job Time</option>
+              <option value="Full time learner">Full time learner</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label for="" class="form__label">
+            Would you recommend freeCodeCamp to a friend?
+            <label for="user-recommend" class="form__radio-label">
+              <input
+                type="radio"
+                value="Definitely"
+                name="user-recommend"
+                checked
+                class="form__radio-input"
+              />
+              Definitely
+            </label>
+            <label class="form__radio-label">
+              <input
+                type="radio"
+                value="Maybe"
+                name="user-recommend"
+                class="form__radio-input"
+              />
+              Maybe
+            </label>
+            <label class="form__radio-label">
+              <input
+                type="radio"
+                value="Not sure"
+                name="user-recommend"
+                class="form__radio-input"
+              />
+              Not sure
+            </label>
+          </label>
+          <label for="" class="form__label">
+            What is your favorite feature of freeCodeCamp?
+            <select name="dropdown" id="dropdown" required class="form__select">
+              <option value="Challenges">Challenges</option>
+              <option value="Projects">Projects</option>
+              <option value="Community">Community</option>
+              <option value="Open Source">Open Source</option>
+            </select>
+          </label>
+          <label for="" class="form__label">
+            Your preferred freeCodeCamp features:
+            <input
+              type="checkbox"
+              name="Front-end Projects"
+              value="Front-end Projects"
+              class="form__checkbox"
+            />Front-end Projects
+            <input
+              type="checkbox"
+              name="Back-end Projects"
+              value="Back-end Projects"
+              class="form__checkbox"
+            />Back-end Projects
+            <input
+              type="checkbox"
+              name="Data Visualization"
+              value="Data Visualization"
+              class="form__checkbox"
+            />Data Visualization
+            <input
+              type="checkbox"
+              name="Open Source Community"
+              value="Open Source Community"
+              class="form__checkbox"
+            />Open Source Community
+            <input
+              type="checkbox"
+              name="Gitter help rooms"
+              value="Gitter help rooms"
+              class="form__checkbox"
+            />Gitter help rooms
+            <input
+              type="checkbox"
+              name="Videos"
+              value="Videos"
+              class="form__checkbox"
+            />
+            <input
+              type="checkbox"
+              name="City Meetups"
+              value="City Meetups"
+              class="form__checkbox"
+            />City Meetups
+            <input
+              type="checkbox"
+              name="Wiki"
+              value="Wiki"
+              class="form__checkbox"
+            />Wiki
+            <input
+              type="checkbox"
+              name="Forum"
+              value="Forum"
+              class="form__checkbox"
+            />Forum
+            <input
+              type="checkbox"
+              name="Additional Courses"
+              value="Additional Courses"
+              class="form__checkbox"
+            />Additional Courses
+          </label>
+          <label for="" class="form__label">
+            Any comments or suggestions?
+          </label>
+        </fieldset>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          class="form__textarea"
+        ></textarea>
+        <input type="submit" name="" id="submit" class="form__submit" />
+        <input type="checkbox" value="checkbox" class="form__checkbox" />
+        <input type="checkbox" value="checkbox" class="form__checkbox" />
+      </form>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+/* 1:reset */
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -12,72 +13,257 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
-#navbar {
-  position: fixed;
-  min-width: 290px;
-  height: 100vh;
-  top: 0px;
-  left: 0px;
-  width: 300px;
-  scroll-behavior: smooth;
-  overflow: auto;
-  border-right: solid;
-  border-color: rgba(0, 22, 22, 0.4);
+/* 2:Variables */
+:root {
+  --font-size-h1: 3rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1rem;
+  --font-size-p: 1rem;
+  --color-text-title: #fff;
+  --color-text-subtitle: #f00;
+  --color-text-text: #000;
+  --primary-color: #999;
+  --secondary-color: #eee;
+  --bg-color: #000;
 }
 
-.nav-link {
-  display: block;
-  font-size: 2rem;
-  padding: 10px 40px;
-  color: #4d4e53;
-  text-decoration: none;
-  cursor: pointer;
+/* 4:general design */
+/* 4.1: Block */
+
+.header {
+  width: 100%;
+  height: auto;
+  background-color: #4d4e53;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.nav-link:hover {
-  color: #4d4e53;
-  font-size: 2.5rem;
+.menu {
+  display: none;
 }
 
-#main-doc {
+/* 4.2: Elements */
+
+.menu__nav {
+  border-bottom: thick solid var(--secondary-color);
+  border-radius: 20%;
+  padding: 1rem 0;
+}
+.menu__nav > a {
+  padding: 0 1rem;
+  color: var(--color-text-title);
+}
+
+.bt__modal {
+  /* display: none; */
+  color: #000;
   position: absolute;
-  margin-left: 310px;
-  padding: 20px;
-  margin-bottom: 110px;
-  scroll-behavior: smooth;
+  top: 6rem;
+  right: 5rem;
+  z-index: 2;
 }
 
-#main-doc > * {
-  padding: 1rem 3rem;
-  font-size: 1.4rem;
+.menu__modal {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  color: var(--color-text-title);
+  background-color: var(--secondary-color);
 }
 
-#main-doc header {
-  margin-left: -2rem;
-  font-size: 2rem;
+.menu__modal:target {
+  display: block;
+}
+.close {
+  font-size: var(--font-size-h3);
+  color: var(--color-text-text);
+  text-align: center;
 }
 
-.title {
-  font-size: 2rem;
-  border-bottom: none;
+.header__title {
+  font-size: var(--font-size-h1);
+  color: var(--color-text-title);
+  text-align: center;
 }
 
-@media (max-width: 800px) {
-  #navbar {
-    position: relative;
-    margin: 2px auto;
-    top: 10px;
-    width: 90vw;
-    height: 30vh;
-    border: thin solid black;
+.main__menu {
+  position: relative;
+  top: -25px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+.main__title {
+  font-size: var(--font-size-h2);
+  color: var(--color-text-subtitle);
+  text-align: center;
+}
+
+.main__nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  overflow: scroll;
+}
+
+.main__link {
+  padding-bottom: 2rem;
+  font-size: var(--font-size-h3);
+  color: var(--color-text-text);
+  text-decoration: none;
+}
+
+.main__link:hover {
+  font-size: var(--font-size-h2);
+  font-weight: bold;
+}
+
+.main__documentation {
+  width: 90%;
+  background-color: var(--secondary-color);
+  margin: 0 auto;
+}
+
+.main__documentation * {
+  text-align: justify;
+  padding: 0 1rem;
+}
+.main__header {
+  text-align: center;
+  color: var(--color-text-subtitle);
+  font-size: var(--font-size-h2);
+}
+
+.main__text {
+  font-size: var(--font-size-p);
+  color: var(--primary-color);
+}
+
+/* 4.3: Modifiers */
+
+.menu__nav-modal {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: c;
+  background-color: var(--primary-color);
+  margin: 0 auto;
+  top: 25px;
+  width: 70%;
+  height: 225px;
+  overflow: auto;
+}
+
+.menu__nav-modal > a {
+  color: var(--color-text-text);
+  text-decoration: none;
+  font-size: var(--font-size-h2);
+  padding: 1rem 1rem;
+  margin: 0 auto;
+}
+.menu__nav-modal > a:hover {
+  color: var(--color-text-subtitle);
+  font-size: var(--font-size-h1);
+}
+
+@media screen and (max-width: 767px) {
+  .header__title {
+    width: 80%;
+    font-size: 2rem;
+    height: 75px;
   }
-  #main-doc {
-    min-width: 60vh;
-    position: absolute;
-    margin: 2px auto;
-    padding: 20px;
-    margin-bottom: 110px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .bt__modal {
+    display: none;
+  }
+  .menu__modal {
+    display: none;
+  }
+  .close {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .menu {
+    display: block;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: block;
+  }
+  body {
+    overflow: none;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "header header header header header"
+      "main__menu main main main main"
+      "main__menu main main main main"
+      "footer footer footer footer footer";
+  }
+
+  .header {
+    grid-area: header;
+    height: 100%;
+    margin: 0;
+  }
+  .main__menu {
+    grid-area: main__menu;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin: 1.5rem;
+    background-color: none;
+  }
+  .main__doc {
+    grid-area: main;
+    height: 100%;
+    margin: 0;
+  }
+  .footer {
+    grid-area: footer;
+    height: 100%;
+    margin: 0;
+  }
+
+  .main__nav {
+    height: 500px;
+    position: sticky;
+    top: 50px;
+  }
+  .menu__modal {
+    display: none;
+  }
+
+  .bt__modal {
+    display: none;
   }
 }

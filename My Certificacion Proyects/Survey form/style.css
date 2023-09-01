@@ -1,0 +1,174 @@
+/* RESET */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* VARIABLES */
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+/* UTILITY CLASSES */
+
+/* GENERAL STYLES */
+
+/* BLOCK AK COMPONENTS */
+
+header {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  top: -0.5rem;
+  z-index: 1;
+}
+
+main {
+  width: 80%;
+  margin: 1rem auto;
+  display: block;
+  position: relative;
+  top: 40px;
+}
+
+.main__title,
+.main__description {
+  text-align: center;
+}
+
+.form {
+  background: var(--color-darkblue-alpha);
+  padding: 40px 10px;
+  border-radius: 3rem;
+}
+
+.form * {
+  display: block;
+  height: max-content;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  border: 0;
+  border-radius: 1.5rem;
+}
+
+/* Elements */
+
+.header__title {
+  margin: 0 1rem;
+}
+.header__nav {
+  width: max-content;
+  background-color: #fff;
+  height: 2rem;
+  flex-direction: row;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.header__link {
+  padding: 0 2rem;
+  margin: 0.5rem 1rem;
+  text-decoration-line: none;
+  color: #000;
+}
+
+.header__link:hover {
+  font-size: bold;
+  color: #f0f;
+  background-color: #1b1b32;
+  margin: thin solid;
+  border-radius: 2rem;
+  padding: 0 2rem;
+}
+
+.form__input,
+select {
+  width: 100%;
+  height: 3rem;
+}
+
+.form label {
+  color: #fff;
+}
+
+.form__checkbox {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+}
+
+.form__checkbox:hover {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 3rem;
+  background-color: #1b1b32;
+}
+
+.form__radio-input {
+  width: 3rem;
+  height: 3rem;
+}
+
+.form__textarea {
+  width: 80%;
+  height: 500px;
+  overflow: auto;
+  margin: 1rem auto;
+}
+
+/* MODIFIERS */
+
+.text--titles {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.text--subtitles {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.text--paragrap {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}

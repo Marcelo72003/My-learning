@@ -1,0 +1,273 @@
+/* RESET */
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* VARIABLES */
+:root {
+  /* header */
+  --bg-header: #e5f5ffea;
+  /* style guide */
+}
+
+/* UTILITY CLASSES */
+
+/* STYLES BEM*/
+/* BLOCK OR COMPONENTS */
+.header {
+  display: block;
+  height: 400px;
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+.header__nav-links {
+  width: 100%;
+  height: 82px;
+  background: var(--bg-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main__div-banner {
+  width: 100%;
+  height: 625px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__section-1 {
+  margin: 0.2rem;
+}
+
+.section__div-parent {
+  width: 100%;
+  margin: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.parent__div-childrens {
+  width: 500px;
+  min-width: 400px;
+  height: 550px;
+  border: thick solid #000;
+  position: relative;
+}
+/* ELEMENTS */
+
+.nav__div-socialmedia {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.2rem;
+}
+
+.div__a-link {
+  border: thin solid #000;
+  border-radius: 50%;
+  z-index: 1;
+  margin: 0.2rem;
+}
+
+.div__a-link:hover {
+  border: thick solid #000;
+  border-radius: 50%;
+  z-index: 1;
+  margin: 0.2rem;
+  background-color: #fff;
+}
+
+.div__a-link img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  padding: 0.3rem;
+}
+
+.nav__a-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: orange;
+}
+
+.nav__a-title:hover {
+  color: rgb(192, 149, 68);
+}
+
+.nav__p-text {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: rgb(192, 149, 68);
+}
+
+.nav__p-text:hover {
+  color: orange;
+}
+
+/* header-menu */
+
+.header__nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav__div-img {
+  min-width: 195px;
+  min-height: 100px;
+  padding: 2rem;
+}
+
+.nav__div-img > img {
+  object-fit: contain;
+  width: 100%;
+}
+.nav__div-menu {
+  padding: 1rem;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.div__menu-a {
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.div__menu-a:hover {
+  color: orange;
+}
+
+.header__div-donate {
+  position: absolute;
+  top: 200px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.children__div-content-hover {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.parent__div-childrens:hover > .children__div-content-hover {
+  display: block;
+}
+
+.div__img-donate {
+  width: 150px;
+  height: 150px;
+}
+
+.div__h2-text {
+  margin: 4rem 4rem;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-indent: 3rem;
+}
+
+.div__bt-donate {
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  border: thin solid orange;
+  border-radius: 45%;
+  color: black;
+  text-decoration: none;
+}
+
+.banner__div-bg,
+.banner__div-img {
+  margin: 0 auto;
+  min-width: 800px;
+  width: 50%;
+  height: 608px;
+}
+
+.banner__div-bg {
+  background-color: #bda86b;
+  background-image: url(https://www.nelsonmandela.org/uploads/files/pattern02.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.banner__div-img > img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.childrens__img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 550px;
+}
+
+.childrens__img::before {
+  content: "EARLY CHILDHOOD DEVELOPMENT";
+  position: relative;
+  /* top: 5px; */
+}
+
+.children__div-content {
+}
+
+.div__stong-title {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
+  background-color: #bda86b88;
+  color: #000;
+  top: 500px;
+  z-index: 2;
+}
+
+.section__h2-title {
+  font-size: 3rem;
+  color: #000;
+  padding-left: 2rem;
+}
+
+/* MODIFIERS */
+.bt__donate--banner {
+  background-color: #555;
+  color: #fff;
+}
+
+.bt__donate--banner:hover {
+  background-color: #fff;
+  color: #555;
+}

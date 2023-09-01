@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?nbe651');
+  src:  url('fonts/icomoon.eot?nbe651#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?nbe651') format('truetype'),
+    url('fonts/icomoon.woff?nbe651') format('woff'),
+    url('fonts/icomoon.svg?nbe651#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fontsm/icomoon.eot?gfl6i0');
+  src:  url('fontsm/icomoon.eot?gfl6i0#iefix') format('embedded-opentype'),
+    url('fontsm/icomoon.ttf?gfl6i0') format('truetype'),
+    url('fontsm/icomoon.woff?gfl6i0') format('woff'),
+    url('fontsm/icomoon.svg?gfl6i0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  z-index: 666666;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fontsi/icomoon.eot?h2d3s6');
+  src:  url('fontsi/icomoon.eot?h2d3s6#iefix') format('embedded-opentype'),
+    url('fontsi/icomoon.ttf?h2d3s6') format('truetype'),
+    url('fontsi/icomoon.woff?h2d3s6') format('woff'),
+    url('fontsi/icomoon.svg?h2d3s6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mexico:before {
+  content: "\e901";
+}
+.icon-icono-aprende:before {
+  content: "\e952";
+}
+.icon-icono-certificate:before {
+  content: "\e953";
+}
+.icon-icono-evaluate:before {
+  content: "\e951";
+}
+.icon-icono-practica:before {
+  content: "\e950";
+}
+.icon-francia:before {
+  content: "\e900";
+}
+.icon-ingles:before {
+  content: "\e909";
+}
+.icon-italia:before {
+  content: "\e90a";
+}
+
+
